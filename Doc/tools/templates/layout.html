@@ -28,6 +28,12 @@
     </style>
     {% endif %}
 {% endblock %}
+{% block document %}
+    <div class="deprecated">
+      {% trans %}Python 2.7 is no longer supported. {% endtrans %} <a href="https://www.python.org/doc/sunset-python-2/">{% trans %}Here's the sunset notice.{% endtrans %}</a>
+    </div>
+    {{ super() }}
+{% endblock %}
 {% block footer %}
     <div class="footer">
     &copy; <a href="{{ pathto('copyright') }}">{% trans %}Copyright{% endtrans %}</a> {{ copyright|e }}.
